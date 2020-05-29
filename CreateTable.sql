@@ -22,3 +22,4 @@ CREATE TABLE Branch(
     CityID int NOT NULL,
     FOREIGN KEY (CityID) REFERENCES City(CityID)    
 )
+
