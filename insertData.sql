@@ -66,3 +66,37 @@ INSERT INTO Branch VALUES ('Auto Gallery Nasiri',1000),
 
 SELECT * FROM Branch        
 
+INSERT INTO Customer VALUES(21801801, 'Thom', 'Yorke', '09121010100', 'Male', 'Wellingborough, United Kingdom', '1968-10-07', NULL, GETDATE()),
+                           (21801802, 'Jonny', 'Greenwood', '09121010101', 'Male', 'Wellingborough, United Kingdom', '1971-11-05', NULL, GETDATE()),
+                           (21801803, 'Colin', 'Greenwood', '09121010102', 'Male', 'Wellingborough, United Kingdom', '1971-06-26', NULL, GETDATE()),
+                           (21801804, 'Ed', 'O brien', '09121010103', 'Male', 'Wellingborough, United Kingdom', NULL, NULL, GETDATE()),
+                           (21801805, 'Philip', 'Selway', '09121010104', 'Male', 'Wellingborough, United Kingdom', NULL, NULL, GETDATE()),
+                           (21801806, 'David', 'Gilmour', '09121010105', 'Male', 'Cambridge, United Kingdom', NULL, NULL, GETDATE()),
+                           (21801807, 'Roger', 'Waters', '09121010106', 'Male', 'Great Bookham, United Kingdom', NULL, NULL, GETDATE()),
+                           (21801808, 'Syd', 'Barret', '09121010107', 'Male', 'Cambridge, United Kingdom', NULL, NULL, GETDATE()),
+                           (21801809, 'Richard', 'Wright', '09121010108', 'Male', 'HatchEnd, United Kingdom', NULL, NULL, GETDATE()),
+                           (21801810, 'Nick', 'Mason', '09121010109', 'Male', 'Edgbaston, Birmingham, United Kingdom', NULL, NULL, GETDATE()),
+                           (21801811, 'Bob', 'Klose', '09121010110', 'Male', 'Cambridge, United Kingdom', NULL, NULL, GETDATE()),
+                           (21801812, 'Dave', 'Grohl', '09121010111', 'Male', 'Warren, Ohio, United States', NULL, NULL, GETDATE()),
+                           (21801813, 'James', 'Hetfield', '09121010112', 'Male', 'Downey, California, United States', NULL, NULL, GETDATE()),
+                           (21801814, 'Lars', 'Olrich', '09121010113', 'Male', 'Gentofte Municipality, Denmark', NULL, NULL, GETDATE()),
+                           (21801815, 'Robert', 'Trujillo', '09121010114', 'Male', 'Santa Monica, California, United States', NULL, NULL, GETDATE()),
+                           (21801816, 'Kirk', 'Hammett', '09121010115', 'Male', 'San Francisco, California, United States', NULL, NULL, GETDATE()),
+                           (21801817, 'John', 'Lennon', '09121010116', 'Male', 'Liverpool, United Kingdom', NULL, NULL, GETDATE()),
+                           (21801818, 'Paul', 'McCartney', '09121010117', 'Male', 'Walton, Liverpool, United Kingdom', NULL, NULL, GETDATE()),
+                           (21801819, 'George', 'Harrison', '09121010118', 'Male', '12 Arnold Grove', NULL, NULL, GETDATE()),
+                           (21801820, 'Freddie', 'Mercury', '09121010119', 'Male', 'Stone Town, Tanzania', NULL, NULL, GETDATE()),                            
+                           (21801821, 'Brian', 'May', '09121010120', 'Male', 'Hampton, United Kingdom', NULL, NULL, GETDATE()),
+                           (21801822, 'Roger', 'Taylor', '09121010121', 'Male', 'Kings Lynn, United Kingdom', NULL, NULL, GETDATE()),
+                           (21801823, 'Nina', 'Simone', '09121010122', 'Female', 'Tryon, North Carolina, United States', NULL, NULL, GETDATE()),
+                           (21801824, 'Pasty', 'Cline', '09121010123', 'Female', 'Winchester, Virginia, United States', NULL, NULL, GETDATE()),
+                           (21801825, 'Johnny', 'Cash', '09121010124', 'Male', 'Kingsland, Arkansas, United States', NULL, NULL, GETDATE()),
+                           (21801826, 'Leonard', 'Cohen', '09121010125', 'Male', 'Westmount, Canada', NULL, NULL, GETDATE()),
+                           (21801827, 'David', 'Bowie', '09121010126', 'Male', 'Brixton, London, United Kingdom', NULL, NULL, GETDATE()),
+                           (21801828, 'Bob', 'Dylan', '09121010127', 'Male', 'Duluth, Minnesota, United States', NULL, NULL, GETDATE()),
+                           (21801829, 'Elvis', 'Presley', '09121010128', 'Male', 'Tupelo, Mississippi, United States', NULL, NULL, GETDATE()),
+                           (21801830, 'Jimi', 'Hendrix', '09121010129', 'Male', 'Seattle, Washington, United States', NULL, NULL, GETDATE())
+
+SELECT * FROM Customer
+DELETE from Customer 
+WHERE FirstName = 'Kurt'
