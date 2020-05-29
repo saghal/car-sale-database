@@ -1,0 +1,6 @@
+CREATE DATABASE carSaleDatabase
+CREATE TABLE City(
+    CityID int PRIMARY KEY IDENTITY(1000,1),
+    CityName VARCHAR(30) NOT NULL,
+    ProvinceID int NOT NULL,
+)
