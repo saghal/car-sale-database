@@ -33,6 +33,22 @@ CREATE TABLE Customer(
     Address VARCHAR(100),
     BirthDate Date,
     Email VARCHAR(50),
-    ChangeDate DATETIME, -- any time if we want change information like Address or phonNumber
+    ChangeDate DATETIME, -- any time if we want change information like Address or phonNumber update this field
     PRIMARY KEY(CustomerID,NationalCode)
+)
+
+CREATE TABLE Supplier(
+    SupplierID INT IDENTITY (1000,1) UNIQUE NOT NULL,
+    NationalCode INT UNIQUE NOT NULL,
+    FirstName VARCHAR(30) NOT NULL,
+    LastName VARCHAR(30) NOT NULL,
+    PhoneNumber VARCHAR(11) NOT NULL,
+    Gender VARCHAR(6) NOT NULL CHECK(Gender in('Male','Female')),
+    CityID int NOT NULL,
+    Address VARCHAR(100),
+    BirthDate DATE,
+    Email VARCHAR(50),
+    ChangeDate DATETIME, -- any time if we want change information like Address or phonNumber update this field
+    FOREIGN KEY(CityID) REFERENCES City(CityID),    
+    PRIMARY KEY(SupplierID,NationalCode)
 )

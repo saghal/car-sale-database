@@ -2,6 +2,7 @@ USE CarSaleDatabase
 GO
 
 INSERT INTO Province VALUES ('Tehran'),
+                            ('Golestan'),
                             ('Isfahan'),
                             ('Khorasan'),
                             ('Fars'),
@@ -13,6 +14,7 @@ INSERT INTO Province VALUES ('Tehran'),
                             ('Qom'),
                             ('Qazvin'),
                             ('Hormozgan')
+
 SELECT * FROM Province
 
 INSERT INTO City VALUES ('Tehran',1000),
@@ -66,7 +68,8 @@ INSERT INTO Branch VALUES ('Auto Gallery Nasiri',1000),
 
 SELECT * FROM Branch        
 
-INSERT INTO Customer VALUES(21801801, 'Thom', 'Yorke', '09121010100', 'Male', 'Wellingborough, United Kingdom', '1968-10-07', NULL, GETDATE()),
+INSERT INTO Customer VALUES(21801800, 'Kurt', 'Cobain', '09122020200', 'Male', 'Aberdeen-Washington-United States', '1967-04-05', NULL, GETDATE()),
+                           (21801801, 'Thom', 'Yorke', '09121010100', 'Male', 'Wellingborough, United Kingdom', '1968-10-07', NULL, GETDATE()),
                            (21801802, 'Jonny', 'Greenwood', '09121010101', 'Male', 'Wellingborough, United Kingdom', '1971-11-05', NULL, GETDATE()),
                            (21801803, 'Colin', 'Greenwood', '09121010102', 'Male', 'Wellingborough, United Kingdom', '1971-06-26', NULL, GETDATE()),
                            (21801804, 'Ed', 'O brien', '09121010103', 'Male', 'Wellingborough, United Kingdom', NULL, NULL, GETDATE()),
@@ -98,5 +101,18 @@ INSERT INTO Customer VALUES(21801801, 'Thom', 'Yorke', '09121010100', 'Male', 'W
                            (21801830, 'Jimi', 'Hendrix', '09121010129', 'Male', 'Seattle, Washington, United States', NULL, NULL, GETDATE())
 
 SELECT * FROM Customer
-DELETE from Customer 
-WHERE FirstName = 'Kurt'
+
+INSERT INTO Supplier VALUES(21801831, 'Cornelius', 'Vanderbilt', '09121010130', 'Male', 1000, NULL, NULL, NULL, GETDATE()),
+                           (21801832, 'Andrew', 'Carnegie', '09121010131', 'Male', 1000, NULL, NULL, NULL, GETDATE()),
+                           (21801833, 'John', 'Pierpont', '09121010132', 'Male', 1000, NULL, NULL, NULL, GETDATE()),
+                           (21801834, 'John', 'Rockefeller', '09121010133', 'Male', 1000, NULL, NULL, NULL, GETDATE()),
+                           (21801835, 'Larry', 'Page', '09121010134', 'Male', 1000, NULL, NULL, NULL, GETDATE()),
+                           (21801836, 'Stephen', 'King', '09121010135', 'Male', 1000, NULL, NULL, NULL, GETDATE()),
+                           (21801837, 'Michael', 'Jackson', '09121010136', 'Male', 1000, NULL, NULL, NULL, GETDATE()),
+                           (21801838, 'George', 'Lucas', '09121010137', 'Male', 1000, NULL, NULL, NULL, GETDATE()),
+                           (21801839, 'Steven', 'Spielberg', '09121010138', 'Male', 1000, NULL, NULL, NULL, GETDATE()),
+                           (21801840, 'Oprah', 'Winfrey ', '09121010139', 'Female', 1000, NULL, NULL, NULL, GETDATE()),
+                           (21801841, 'Billie', 'King', '09121010140', 'Female', 1000, NULL, NULL, NULL, GETDATE()),
+                           (21801842, 'Serena', 'Williams', '09121010141', 'Female', 1000, NULL, NULL, NULL, GETDATE())
+
+SELECT * FROM Supplier
