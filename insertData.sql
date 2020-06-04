@@ -116,3 +116,33 @@ INSERT INTO Supplier VALUES(21801831, 'Cornelius', 'Vanderbilt', '09121010130', 
                            (21801842, 'Serena', 'Williams', '09121010141', 'Female', 1000, NULL, NULL, NULL, GETDATE())
 
 SELECT * FROM Supplier
+
+
+INSERT INTO Company VALUES('Toyota','Japan'),
+                          ('Volkswagen Group','Germany'),
+                          ('Hyundai','South korea'),
+                          ('General Motors','United States'),
+                          ('Ford','United States'),
+                          ('Nissan','Japan'),
+                          ('Fiat','Italy'),
+                          ('Renault','France'),
+                          ('BMW','Germany'),
+                          ('Audi','Germany'),
+                          ('Mercedes Benz','Germany'),
+                          ('Porsche','Germany'),
+                          ('Jaguar','United Kingdom'),
+                          ('Land Rover','United Kingdom'),
+                          ('Rolls Royce','United Kingdom'),
+                          ('McLaren','United Kingdom'),
+                          ('Bentley','United Kingdom'),
+                          ('Aston Martin','United Kingdom'),
+                          ('Citroen','France'),
+                          ('Peugeot','France'),
+                          ('Ferrari','Italy'),
+                          ('Cadillac','United States'),
+                          ('Chevrolet','United States'),
+                          ('Jeep','United States'),
+                          ('Tesla','United States'),
+                          ('IKCO','Iran')
+
+SELECT * FROM Company

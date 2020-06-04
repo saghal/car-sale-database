@@ -52,3 +52,11 @@ CREATE TABLE Supplier(
     FOREIGN KEY(CityID) REFERENCES City(CityID),    
     PRIMARY KEY(SupplierID,NationalCode)
 )
+
+
+CREATE TABLE Company(
+    CompanyID INT IDENTITY (1000,1) PRIMARY KEY,
+    Name VARCHAR(30) NOT NULL,
+    Country VARCHAR(30) NOT NULL
+)
+
