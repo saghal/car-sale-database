@@ -146,3 +146,16 @@ INSERT INTO Company VALUES('Toyota','Japan'),
                           ('IKCO','Iran')
 
 SELECT * FROM Company
+
+INSERT INTO TypeOfCar VALUES('Micro'),
+                            ('Sedan'),
+                            ('Cuv'),
+                            ('Suv'),
+                            ('Hatchback'),
+                            ('Van'),
+                            ('MiniVan'),
+                            ('Coupe'),
+                            ('SuperCar'),
+                            ('RoadSter')
+
+SELECT * FROM TypeOfCar
