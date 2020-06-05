@@ -80,12 +80,15 @@ CREATE TABLE Vehicle(
     TypeID INT NOT NULL,
     ProductionYear INT NOT NULL,
     Fuel VARCHAR(10) CHECK(Fuel in ('Gasoline','Hybride','CNG')),
-    Price money NOT NULL,
     Description VARCHAR(100),
     FOREIGN KEY(TypeID) REFERENCES TypeOfCar(TypeID),    
     FOREIGN KEY(CompanyID) REFERENCES Company(CompanyID),    
     FOREIGN KEY(ColorID) REFERENCES Color(ColorID),    
     PRIMARY KEY(CarID,EngineNumber)
 )
+
+
+ALTER TABLE Vehicle
+DROP COLUMN Price;
 
 SELECT * FROM Vehicle
