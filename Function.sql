@@ -48,9 +48,9 @@ ALTER FUNCTION CountryCars(@CountryName VARCHAR(20))
                                                                 ON Buy.CarID = Vehicle.CarID
                                              inner join Company 
                                                                 ON Company.CompanyID = Vehicle.CompanyID))
-            SET @Status = 'WE bought this country Cars'
+            SET @Status = 'We bought from this country'
         
-        else set @Status = 'WE do not bought this country Cars'
+        else set @Status = 'We do not bought from this country'
         RETURN @Status
     END
 
