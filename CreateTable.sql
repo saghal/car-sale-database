@@ -109,5 +109,3 @@ CREATE TABLE Sale(
     FOREIGN KEY(CarID) REFERENCES Vehicle(CarID),    
     FOREIGN KEY(CustomerID) REFERENCES Customer(CustomerID)    
 )
-SELECT * FROM Sale
-SELECT * FROM Buy
