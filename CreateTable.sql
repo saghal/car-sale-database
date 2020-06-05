@@ -87,8 +87,27 @@ CREATE TABLE Vehicle(
     PRIMARY KEY(CarID,EngineNumber)
 )
 
+CREATE TABLE Buy(
+    BuyID INT IDENTITY(1000,1) PRIMARY KEY,
+    SupplierID INT NOT NULL,
+    CarID INT NOT NULL,
+    BuyDate DATE NOT NULL,
+    Price money NOT NULL,
+    FOREIGN KEY(SupplierID)REFERENCES Supplier(SupplierID),    
+    FOREIGN KEY(CarID) REFERENCES Vehicle(CarID),    
 
-ALTER TABLE Vehicle
-DROP COLUMN Price;
+)
 
-SELECT * FROM Vehicle
+CREATE TABLE Sale(
+    SaleID INT IDENTITY(1000,1) PRIMARY KEY,
+    BranchID INT NOT NULL,
+    CarID INT NOT NULL,
+    CustomerID INT NOT NULL,
+    SaleDate DATE NOT NULL,
+    Price money NOT NULL
+    FOREIGN KEY(BranchID) REFERENCES Branch(BranchID),    
+    FOREIGN KEY(CarID) REFERENCES Vehicle(CarID),    
+    FOREIGN KEY(CustomerID) REFERENCES Customer(CustomerID)    
+)
+SELECT * FROM Sale
+SELECT * FROM Buy
