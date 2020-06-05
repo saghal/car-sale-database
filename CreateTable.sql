@@ -64,3 +64,28 @@ CREATE TABLE TypeOfCar(
     TypeID INT IDENTITY (1000,1) PRIMARY KEY,
     Name VARCHAR(25) NOT NULL,
 )
+
+CREATE TABLE Color(
+    ColorID INT IDENTITY(1000,1) PRIMARY KEY,
+    NAME VARCHAR(25) NOT NULL
+)
+
+CREATE TABLE Vehicle(
+    CarID INT IDENTITY(1000,1) UNIQUE NOT NULL,
+    EngineNumber VARCHAR(11) UNIQUE NOT NULL,
+    CompanyID INT NOT NULL,
+    Model VARCHAR(30) NOT NULL,
+    ColorID INT NOT NULL,
+    Miles int DEFAULT 0,
+    TypeID INT NOT NULL,
+    ProductionYear INT NOT NULL,
+    Fuel VARCHAR(10) CHECK(Fuel in ('Gasoline','Hybride','CNG')),
+    Price money NOT NULL,
+    Description VARCHAR(100),
+    FOREIGN KEY(TypeID) REFERENCES TypeOfCar(TypeID),    
+    FOREIGN KEY(CompanyID) REFERENCES Company(CompanyID),    
+    FOREIGN KEY(ColorID) REFERENCES Color(ColorID),    
+    PRIMARY KEY(CarID,EngineNumber)
+)
+
+SELECT * FROM Vehicle
