@@ -1,0 +1,56 @@
+<FirstPageScreen>:
+    id: main
+    orientation: 'vertical'
+    canvas.before:
+        Color:
+            rgba:(.038, .050, .056 , 1)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    BoxLayout:
+        size_hint_y:None
+        height: 50  
+        canvas.before:
+            Color:
+                rgba: (.038, .050, .056 , 1)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+        Label:
+            id:header
+            text: 'Car Sale Managment'
+            size_hint_y:None
+            height:40
+            font_size: 30
+            bold: True
+            color:1, 1, 1, 1
+
+    GridLayout:
+
+        id: first_page
+        cols:2
+        orientation: 'horizontal'
+        Button:
+            background_normal: ''
+            background_color: (.055, .071, .079 , 1)
+            font_size:16
+            bold: True
+            text: "Province"
+            on_release: root.ShiftToProvince()
+        Button:
+            background_normal: ''
+            background_color: (.055, .071, .079 , 1)
+            text: "Province"
+            font_size:16
+            bold: True
+            on_release: root.ShiftToProvince()
+        Button:
+            background_normal: ''
+            background_color: (.055, .071, .079 , 1)
+            text: "Province"
+            font_size:16
+            bold: True
+            on_release: root.ShiftToProvince()
+
