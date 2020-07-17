@@ -13,7 +13,7 @@ class ProvincePageScreen(BoxLayout, GridLayout, AnchorLayout):
         super().__init__(**kwargs)
 
     def ShiftToProvinceList(self):
-        self.parent.parent.current = ''
+        self.parent.parent.current = 'provinceListPageScreen'
 
     def BackToFirstPage(self):
         self.parent.parent.current = 'firstPageScreen'

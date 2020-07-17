@@ -1,5 +1,5 @@
 <ProvincePageScreen>:
-    id: main
+    id: main_win
     orientation: 'vertical'
     canvas.before:
         Color:
@@ -9,31 +9,49 @@
             pos: self.pos
 
     BoxLayout:
-        cols:2
-        size_hint_y:None
-        height: 80  
+        id: header
+        size_hint_y: None
+        height: 40
         canvas.before:
             Color:
                 rgba: (.038, .050, .056 , 1)
             Rectangle:
                 size: self.size
                 pos: self.pos
-
         Label:
-            id:header
             text: 'Province'
+            size_hint_x: .9
             bold: True
-            color:(1 , 1 , 1 , 1)
+            font_size: 25
+            color: (1,1,1,1)
 
-        Button:
+    BoxLayout:
+        id: current
+        size_hint_y: None
+        height: 25
+        padding: 5
+        canvas.before:
+            Color:
+                rgba: (.038, .050, .056 , 1)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            text: ''
             background_normal: ''
             background_color: (.038, .050, .056 , 1)
-            halign:"right"
-            text: "Back"
+            size_hint_x: .6
+        Button: 
+            id: cur_price
+            text: 'Back'
+            background_normal: ''
+            background_color: (.038, .050, .056 , 1)
+            size_hint_x: .05
             on_release: root.BackToFirstPage()
 
     GridLayout:
         id: first_page
+        padding: 5
         cols:2
         orientation: 'horizontal'
         Button:
