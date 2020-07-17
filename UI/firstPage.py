@@ -5,13 +5,13 @@ from kivy.lang import Builder
 
 Builder.load_file('firstPage.kv')
 
-class FirstPageScreen(BoxLayout):
+class FirstPageScreen(BoxLayout,GridLayout):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
     def ShiftToProvince(self):
-        self.parent.parent.current = '' 
+        self.parent.parent.current = 'provincePageScreen'
     
      
 

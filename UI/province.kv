@@ -1,0 +1,63 @@
+<ProvincePageScreen>:
+    id: main
+    orientation: 'vertical'
+    canvas.before:
+        Color:
+            rgba: (.038, .050, .056 , 1)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    BoxLayout:
+        cols:2
+        size_hint_y:None
+        height: 80  
+        canvas.before:
+            Color:
+                rgba: (.038, .050, .056 , 1)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+        Label:
+            id:header
+            text: 'Province'
+            bold: True
+            color:(1 , 1 , 1 , 1)
+
+        Button:
+            background_normal: ''
+            background_color: (.038, .050, .056 , 1)
+            halign:"right"
+            text: "Back"
+            on_release: root.BackToFirstPage()
+
+    GridLayout:
+        id: first_page
+        cols:2
+        orientation: 'horizontal'
+        Button:
+            background_normal: ''
+            background_color: (.069 , .090 , .100 , 1)
+            text: "Province List"
+            on_release: root.ShiftToProvinceList()
+        Button:
+            background_normal: ''
+            background_color: (.069 , .090 , .100 , 1)
+            text: "Province ..."
+            on_release: root.ShiftToProvinceList()
+        Button:
+            background_normal: ''
+            background_color: (.069 , .090 , .100 , 1)
+            text: "Province ..."
+            on_release: root.ShiftToProvinceList()
+        Button:
+            background_normal: ''
+            background_color: (.069 , .090 , .100 , 1)
+            text: "Province ..."
+            on_release: root.ShiftToProvinceList()
+        Button:
+            background_normal: ''
+            background_color: (.069 , .090 , .100 , 1)
+            text: "Province ..."
+            on_release: root.ShiftToProvinceList()
