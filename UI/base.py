@@ -5,6 +5,10 @@ import firstPage
 import tables
 import provinceList
 import vehicleList
+import companyList
+
+
+
 Builder.load_file('base.kv')
 
 class BasePage(BoxLayout):
@@ -13,7 +17,7 @@ class BasePage(BoxLayout):
     tablesPage = tables.TablesPageScreen()
     provinceListPage = provinceList.ProvinceListPageScreen()
     vehicleListPage = vehicleList.vehicleListPageScreen()
-
+    companyListPage = companyList.companyListPageScreen()
 
 
     def __init__(self , **kwargs):
@@ -22,6 +26,7 @@ class BasePage(BoxLayout):
         self.ids.TablesListPage.add_widget(self.tablesPage)
         self.ids.ProvinceListPage.add_widget(self.provinceListPage)
         self.ids.VehicleListPage.add_widget(self.vehicleListPage)
+        self.ids.CompanyListPage.add_widget(self.companyListPage)
 
 
 class MainApp(App):
