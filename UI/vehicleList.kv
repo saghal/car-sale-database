@@ -1,7 +1,7 @@
 <FlatButton@ButtonBehavior+Label>:
     font_size: 14
 
-<ProvinceListPageScreen>:
+<vehicleListPageScreen>:
     id: main_win
     orientation: 'vertical'
     canvas.before:
@@ -49,7 +49,7 @@
             background_normal: ''
             background_color: (.038, .050, .056 , 1)
             size_hint_x: .05
-            on_release: root.BackToProvincePage()
+            on_release: root.BackToTablesPage()
     BoxLayout:
         padding: 10
         BoxLayout:
@@ -71,16 +71,38 @@
                             size: self.size
                             pos: self.pos
                     Label:
-                        text: 'Code'
+                        text: 'CarID'
                         size_hint_x: .200
                     Label:
-                        text: 'Province name'
+                        text: 'Engine Num'
                         size_hint_x: .500
-
+                    Label:
+                        text: 'CompanyID'
+                        size_hint_x: .200
+                    Label:
+                        text: 'Model'
+                        size_hint_x: .500
+                    Label:
+                        text: 'ColorID'
+                        size_hint_x: .200
+                    Label:
+                        text: 'Miles'
+                        size_hint_x: .500
+                    Label:
+                        text: 'TypeID'
+                        size_hint_x: .200
+                    Label:
+                        text: 'Prod Year'
+                        size_hint_x: .500
+                    Label:
+                        text: 'Fuel'
+                        size_hint_x: .200
                 ScrollView:
                     GridLayout:
-                        id: province
+                        id: vehicle
                         size_hint_y:None
                         cols: 1
                         row_default_height: root.height*0.02
                         height: self.minimum_height
+
+

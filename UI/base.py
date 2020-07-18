@@ -2,23 +2,26 @@ from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.lang import Builder
 import firstPage
-import province
+import tables
 import provinceList
+import vehicleList
 Builder.load_file('base.kv')
 
 class BasePage(BoxLayout):
 
     firstPage = firstPage.FirstPageScreen()
-    provincePage = province.ProvincePageScreen()
+    tablesPage = tables.TablesPageScreen()
     provinceListPage = provinceList.ProvinceListPageScreen()
+    vehicleListPage = vehicleList.vehicleListPageScreen()
 
 
 
     def __init__(self , **kwargs):
         super().__init__(**kwargs)
         self.ids.FirstPage.add_widget(self.firstPage)
-        self.ids.ProvincePage.add_widget(self.provincePage)
+        self.ids.TablesListPage.add_widget(self.tablesPage)
         self.ids.ProvinceListPage.add_widget(self.provinceListPage)
+        self.ids.VehicleListPage.add_widget(self.vehicleListPage)
 
 
 class MainApp(App):

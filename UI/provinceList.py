@@ -27,23 +27,24 @@ class ProvinceListPageScreen(BoxLayout):
 
     def updateProvince(self):
 
-        products_container = self.ids.products
+        provinceContainer = self.ids.province
 
         for row in cursor:
-            details = BoxLayout(size_hint_y=None, height=30, pos_hint={
-                                'top': 1}, padding=5)
-            products_container.add_widget(details)
+            details = BoxLayout(size_hint_y=None, height=30, pos_hint={'top': 1}, padding=5)
+            provinceContainer.add_widget(details)
 
-            name = Label(text=str(row[0]), size_hint_x=.112,
-                         color=(.06, .45, .45, 1))
-            qty = Label(text=row[1], size_hint_x=.350, color=(.06, .45, .45, 1))
-            details.add_widget(name)
-            details.add_widget(qty)
-        
+            PID = Label(text=str(row[0]), size_hint_x=.112,color=(.06, .45, .45, 1))
+            PName = Label(text=row[1], size_hint_x=.350, color=(.06, .45, .45, 1))
+            details.add_widget(PID)
+            details.add_widget(PName)
+
+        cursor.close()
+        connection.close()
+
 
 
     def BackToProvincePage(self):
-        self.parent.parent.current = 'provincePageScreen'
+        self.parent.parent.current = 'TablesListPageScreen'
 
 
 

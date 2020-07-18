@@ -10,10 +10,8 @@ class FirstPageScreen(BoxLayout,GridLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-    def ShiftToProvince(self):
-        self.parent.parent.current = 'provincePageScreen'
-    
-     
+    def ShiftToTables(self):
+        self.parent.parent.current = 'TablesListPageScreen'
 
 
 class MainApp(App):

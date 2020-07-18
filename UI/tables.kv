@@ -1,4 +1,4 @@
-<ProvincePageScreen>:
+<TablesPageScreen>:
     id: main_win
     orientation: 'vertical'
     canvas.before:
@@ -19,7 +19,7 @@
                 size: self.size
                 pos: self.pos
         Label:
-            text: 'Province'
+            text: 'Tables'
             size_hint_x: .9
             bold: True
             font_size: 25
@@ -57,13 +57,15 @@
         Button:
             background_normal: ''
             background_color: (.069 , .090 , .100 , 1)
-            text: "Province List"
+            text: "Province"
+            bold: True
             on_release: root.ShiftToProvinceList()
         Button:
             background_normal: ''
             background_color: (.069 , .090 , .100 , 1)
-            text: "Province ..."
-            on_release: root.ShiftToProvinceList()
+            text: "Vehicle"
+            bold: True
+            on_release: root.ShiftToVehicleList()
         Button:
             background_normal: ''
             background_color: (.069 , .090 , .100 , 1)

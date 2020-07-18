@@ -4,16 +4,19 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.anchorlayout import AnchorLayout
 from kivy.lang import Builder
 
-Builder.load_file('province.kv')
+Builder.load_file('tables.kv')
 
 
-class ProvincePageScreen(BoxLayout, GridLayout, AnchorLayout):
+class TablesPageScreen(BoxLayout, GridLayout, AnchorLayout):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
     def ShiftToProvinceList(self):
         self.parent.parent.current = 'provinceListPageScreen'
+
+    def ShiftToVehicleList(self):
+        self.parent.parent.current = 'vehicleListPageScreen'
 
     def BackToFirstPage(self):
         self.parent.parent.current = 'firstPageScreen'
@@ -24,7 +27,7 @@ class ProvincePageScreen(BoxLayout, GridLayout, AnchorLayout):
 class MainApp(App):
 
     def build(self):
-        return ProvincePageScreen()
+        return TablesPageScreen()
 
 
 if __name__ == "__main__":
