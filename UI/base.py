@@ -6,7 +6,7 @@ import tables
 import provinceList
 import vehicleList
 import companyList
-
+import buyList
 
 
 Builder.load_file('base.kv')
@@ -18,7 +18,7 @@ class BasePage(BoxLayout):
     provinceListPage = provinceList.ProvinceListPageScreen()
     vehicleListPage = vehicleList.vehicleListPageScreen()
     companyListPage = companyList.companyListPageScreen()
-
+    buyListPage = buyList.buyListPageScreen()
 
     def __init__(self , **kwargs):
         super().__init__(**kwargs)
@@ -27,7 +27,7 @@ class BasePage(BoxLayout):
         self.ids.ProvinceListPage.add_widget(self.provinceListPage)
         self.ids.VehicleListPage.add_widget(self.vehicleListPage)
         self.ids.CompanyListPage.add_widget(self.companyListPage)
-
+        self.ids.BuyListPage.add_widget(self.buyListPage)
 
 class MainApp(App):
 
