@@ -8,6 +8,9 @@ import vehicleList
 import companyList
 import buyList
 import saleList
+import branchList
+import customerList
+import supplierList
 
 Builder.load_file('base.kv')
 
@@ -20,6 +23,9 @@ class BasePage(BoxLayout):
     companyListPage = companyList.companyListPageScreen()
     buyListPage = buyList.buyListPageScreen()
     saleListPage = saleList.saleListPageScreen()
+    branchListPage = branchList.branchListPageScreen()
+    customerListPage = customerList.customerListPageScreen()
+    supplierListPage = supplierList.supplierListPageScreen()
 
     def __init__(self , **kwargs):
         super().__init__(**kwargs)
@@ -30,6 +36,9 @@ class BasePage(BoxLayout):
         self.ids.CompanyListPage.add_widget(self.companyListPage)
         self.ids.BuyListPage.add_widget(self.buyListPage)
         self.ids.SaleListPage.add_widget(self.saleListPage)
+        self.ids.BranchListPage.add_widget(self.branchListPage)
+        self.ids.CustomerListPage.add_widget(self.customerListPage)
+        self.ids.SupplierListPage.add_widget(self.supplierListPage)
 
 class MainApp(App):
 

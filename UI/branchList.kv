@@ -1,0 +1,91 @@
+<FlatButton@ButtonBehavior+Label>:
+    font_size: 14
+
+<branchListPageScreen>:
+    id: main_win
+    orientation: 'vertical'
+    canvas.before:
+        Color:
+            rgba: (.038, .050, .056 , 1)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    BoxLayout:
+        id: header
+        size_hint_y: None
+        height: 40
+        canvas.before:
+            Color:
+                rgba: (.038, .050, .056 , 1)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            text: 'Branch List'
+            size_hint_x: .9
+            bold: True
+            font_size: 25
+            color: (1,1,1,1)
+
+    BoxLayout:
+        id: current
+        size_hint_y: None
+        height: 10
+        canvas.before:
+            Color:
+                rgba: (.038, .050, .056 , 1)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            text: ''
+            background_normal: ''
+            background_color: (.038, .050, .056 , 1)
+            size_hint_x: .6
+        Button: 
+            id: cur_price
+            text: 'Back'
+            background_normal: ''
+            background_color: (.038, .050, .056 , 1)
+            size_hint_x: .05
+            on_release: root.BackToTablesPage()
+    BoxLayout:
+        padding: 10
+        BoxLayout:
+            id: product_details
+            orientation: "vertical"
+            size_hint_x: .700
+            spacing: 10
+
+            BoxLayout:
+                id: add_to_cart
+                orientation: 'vertical'
+                BoxLayout:
+                    size_hint_y: None
+                    height: 30
+                    canvas.before:
+                        Color:
+                            rgba: (.055, .071, .079, 1)
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    Label:
+                        text: 'BranchID'
+                        size_hint_x: .200
+                    Label:
+                        text: 'Branch Name'
+                        size_hint_x: .200
+                    Label:
+                        text: 'CityID'
+                        size_hint_x: .200
+
+                ScrollView:
+                    GridLayout:
+                        id: branch
+                        size_hint_y:None
+                        cols: 1
+                        row_default_height: root.height*0.02
+                        height: self.minimum_height
+
+

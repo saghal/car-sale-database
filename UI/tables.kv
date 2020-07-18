@@ -52,7 +52,7 @@
     GridLayout:
         id: first_page
         padding: 5
-        cols:2
+        cols:3
         orientation: 'horizontal'
         Button:
             background_normal: ''
@@ -60,27 +60,52 @@
             text: "Province"
             bold: True
             on_release: root.ShiftToProvinceList()
+      
         Button:
             background_normal: ''
             background_color: (.069 , .090 , .100 , 1)
             text: "Vehicle"
             bold: True
             on_release: root.ShiftToVehicleList()
+      
         Button:
             background_normal: ''
             background_color: (.069 , .090 , .100 , 1)
             text: "Company"
             bold: True
             on_release: root.ShiftToCompanyList()
+      
         Button:
             background_normal: ''
             background_color: (.069 , .090 , .100 , 1)
             text: "Buy"
             bold: True
             on_release: root.ShiftToBuyList()
+      
         Button:
             background_normal: ''
             background_color: (.069 , .090 , .100 , 1)
             text: "Sale"
             bold: True
             on_release: root.ShiftToSaleList()
+
+        Button:
+            background_normal: ''
+            background_color: (.069 , .090 , .100 , 1)
+            text: "Branch"
+            bold: True
+            on_release: root.ShiftToBranchList()
+
+        Button:
+            background_normal: ''
+            background_color: (.069 , .090 , .100 , 1)
+            text: "Customer"
+            bold: True
+            on_release: root.ShiftToCustomerList()
+
+        Button:
+            background_normal: ''
+            background_color: (.069 , .090 , .100 , 1)
+            text: "Supplier"
+            bold: True
+            on_release: root.ShiftToSupplierList()
