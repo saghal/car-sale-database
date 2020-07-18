@@ -24,6 +24,10 @@ class TablesPageScreen(BoxLayout, GridLayout, AnchorLayout):
     def ShiftToBuyList(self):
         self.parent.parent.current = 'buyListPageScreen'
 
+    def ShiftToSaleList(self):
+        self.parent.parent.current = 'saleListPageScreen'
+
+
     def BackToFirstPage(self):
         self.parent.parent.current = 'firstPageScreen'
 

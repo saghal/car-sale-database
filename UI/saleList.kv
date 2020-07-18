@@ -1,7 +1,7 @@
 <FlatButton@ButtonBehavior+Label>:
     font_size: 14
 
-<buyListPageScreen>:
+<saleListPageScreen>:
     id: main_win
     orientation: 'vertical'
     canvas.before:
@@ -22,7 +22,7 @@
                 size: self.size
                 pos: self.pos
         Label:
-            text: 'Buy List'
+            text: 'Sale List'
             size_hint_x: .9
             bold: True
             font_size: 25
@@ -71,17 +71,21 @@
                             size: self.size
                             pos: self.pos
                     Label:
-                        text: 'BuyID'
+                        text: 'SaleID'
                         size_hint_x: .200
                     Label:
-                        text: 'SupplierID'
+                        text: 'BranchID'
                         size_hint_x: .200
                     Label:
                         text: 'CarID'
                         size_hint_x: .200
+ 
+                    Label:
+                        text: 'CustomerID'
+                        size_hint_x: .200
 
                     Label:
-                        text: 'Buy Date'
+                        text: 'Sale Date'
                         size_hint_x: .200
 
                     Label:
@@ -91,7 +95,7 @@
 
                 ScrollView:
                     GridLayout:
-                        id: buy
+                        id: sale
                         size_hint_y:None
                         cols: 1
                         row_default_height: root.height*0.02

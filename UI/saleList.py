@@ -5,7 +5,7 @@ from kivy.lang import Builder
 import pymssql
 
 
-Builder.load_file('buyList.kv')
+Builder.load_file('saleList.kv')
 
 
 SERVER = "localhost"
@@ -16,37 +16,41 @@ DATABASE = "CarSaleDatabase"
 connection = pymssql.connect(server=SERVER, user=USER,
                              password=PASSWORD, database=DATABASE)
 cursor = connection.cursor()
-cursor.execute("SELECT * FROM Buy")
+cursor.execute("SELECT * FROM Sale")
 
 
-class buyListPageScreen(BoxLayout):
+class saleListPageScreen(BoxLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.updateBuy()
+        self.updateSale()
 
-    def updateBuy(self):
+    def updateSale(self):
 
-        BuyContainer = self.ids.buy
+        SaleContainer = self.ids.sale
         for row in cursor:
             details = BoxLayout(size_hint_y=None, height=30,
                                 pos_hint={'top': 1}, padding=5)
-            BuyContainer.add_widget(details)
+            SaleContainer.add_widget(details)
 
-            bID = Label(text=str(row[0]),
+            bID = Label(text=str(row[1]),
                         size_hint_x=.112, color=(.06, .45, .45, 1))
-            sID = Label(
-                text=str(row[1]), size_hint_x=.112, color=(.06, .45, .45, 1))
-            cID = Label(
+            carID = Label(
                 text=str(row[2]), size_hint_x=.112, color=(.06, .45, .45, 1))
-            bDate = Label(
+            cID = Label(
                 text=str(row[3]), size_hint_x=.112, color=(.06, .45, .45, 1))
-            price = Label(
+            sDate = Label(
                 text=str(row[4]), size_hint_x=.112, color=(.06, .45, .45, 1))
+            price = Label(
+                text=str(row[5]), size_hint_x=.112, color=(.06, .45, .45, 1))
+            sID = Label(
+                text=str(row[0]), size_hint_x=.112, color=(.06, .45, .45, 1))
 
-            details.add_widget(bID)
+
             details.add_widget(sID)
+            details.add_widget(bID)
+            details.add_widget(carID)
             details.add_widget(cID)
-            details.add_widget(bDate)
+            details.add_widget(sDate)
             details.add_widget(price)
 
         cursor.close()
@@ -59,7 +63,7 @@ class buyListPageScreen(BoxLayout):
 class MainApp(App):
 
     def build(self):
-        return buyListPageScreen()
+        return saleListPageScreen()
 
 
 if __name__ == "__main__":
