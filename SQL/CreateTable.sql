@@ -109,3 +109,25 @@ CREATE TABLE Sale(
     FOREIGN KEY(CarID) REFERENCES Vehicle(CarID),    
     FOREIGN KEY(CustomerID) REFERENCES Customer(CustomerID)    
 )
+
+
+ALTER TABLE Customer 
+DROP COLUMN PhoneNumber;
+
+ALTER TABLE Supplier
+DROP COLUMN PhoneNumber;
+
+CREATE TABLE CustomerPhoneNumber(
+    PhoneNumber VARCHAR(11) NOT NULL,
+    NationalCode int,
+    PRIMARY KEY (PhoneNumber,NationalCode),
+    FOREIGN KEY (NationalCode) REFERENCES Customer(NationalCode)
+)
+
+CREATE TABLE SupplierPhoneNumber(
+    PhoneNumber VARCHAR(11) NOT NULL,
+    NationalCode int,
+    PRIMARY KEY (PhoneNumber,NationalCode),
+    FOREIGN KEY (NationalCode) REFERENCES Supplier(NationalCode)
+)
+
