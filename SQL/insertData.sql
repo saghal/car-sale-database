@@ -307,3 +307,25 @@ INSERT INTO Sale VALUES
     (1004, 1049, 1012, GETDATE(), 39700)
 
 SELECT * FROM Sale
+
+
+INSERT INTO SupplierPhoneNumber VALUES
+                            ('09121010100',21801831),
+                            ('09121010101',21801832),
+                            ('09121010102',21801833),
+                            ('09121010103',21801834),
+                            ('09121010104',21801835)
+
+SELECT * FROM SupplierPhoneNumber                            
+
+
+
+INSERT INTO CustomerPhoneNumber
+VALUES
+    ('09121010105', 21801800),
+    ('09121010106', 21801801),
+    ('09121010107', 21801802),
+    ('09121010108', 21801803),
+    ('09121010109', 21801804)
+
+SELECT * FROM CustomerPhoneNumber                            
