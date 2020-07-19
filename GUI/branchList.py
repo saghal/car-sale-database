@@ -5,49 +5,43 @@ from kivy.lang import Builder
 import pymssql
 
 
-Builder.load_file('customerList.kv')
+Builder.load_file('branchList.kv')
 
-
+f = open("/home/mohammadsgh/Desktop/pass.txt", "r")
 SERVER = "localhost"
 USER = "sa"
-PASSWORD = ""
+PASSWORD = f.read().split('\n')[0]
 DATABASE = "CarSaleDatabase"
-
+f.close()
 connection = pymssql.connect(server=SERVER, user=USER,
                              password=PASSWORD, database=DATABASE)
 cursor = connection.cursor()
-cursor.execute("SELECT * FROM Customer")
+cursor.execute("SELECT * FROM Branch")
 
 
-class customerListPageScreen(BoxLayout):
+class branchListPageScreen(BoxLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.updateCustomer()
+        self.updateBranch()
 
-    def updateCustomer(self):
+    def updateBranch(self):
 
-        CustomerContainer = self.ids.customer
+        BranchContainer = self.ids.branch
         for row in cursor:
             details = BoxLayout(size_hint_y=None, height=30,
                                 pos_hint={'top': 1}, padding=5)
-            CustomerContainer.add_widget(details)
+            BranchContainer.add_widget(details)
 
-            nc = Label(text=str(row[1]),
+            bID = Label(text=str(row[0]),
                         size_hint_x=.112, color=(.06, .45, .45, 1))
-            fname = Label(
+            bName = Label(
+                text=str(row[1]), size_hint_x=.112, color=(.06, .45, .45, 1))
+            cID = Label(
                 text=str(row[2]), size_hint_x=.112, color=(.06, .45, .45, 1))
-            lname = Label(
-                text=str(row[3]), size_hint_x=.112, color=(.06, .45, .45, 1))
-            pnum = Label(
-                text=str(row[4]), size_hint_x=.112, color=(.06, .45, .45, 1))
-            geneder = Label(
-                text=str(row[5]), size_hint_x=.112, color=(.06, .45, .45, 1))
 
-            details.add_widget(nc)
-            details.add_widget(fname)
-            details.add_widget(lname)
-            details.add_widget(pnum)
-            details.add_widget(geneder)
+            details.add_widget(bID)
+            details.add_widget(bName)
+            details.add_widget(cID)
 
         cursor.close()
         connection.close()
@@ -59,7 +53,7 @@ class customerListPageScreen(BoxLayout):
 class MainApp(App):
 
     def build(self):
-        return customerListPageScreen()
+        return branchListPageScreen()
 
 
 if __name__ == "__main__":

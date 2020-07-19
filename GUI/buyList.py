@@ -8,10 +8,12 @@ import pymssql
 Builder.load_file('buyList.kv')
 
 
+f = open("/home/mohammadsgh/Desktop/pass.txt", "r")
 SERVER = "localhost"
 USER = "sa"
-PASSWORD = ""
+PASSWORD = f.read().split('\n')[0]
 DATABASE = "CarSaleDatabase"
+f.close()
 
 connection = pymssql.connect(server=SERVER, user=USER,
                              password=PASSWORD, database=DATABASE)
