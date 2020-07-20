@@ -12,6 +12,9 @@ class dashboardPageScreen(BoxLayout, GridLayout, AnchorLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
+    def ShiftToCheckBuyFromCountry(self):
+        self.parent.parent.current = 'checkBuyFromCountryPageScreen'
+
     def BackToFirstPage(self):
         self.parent.parent.current = 'firstPageScreen'
 

@@ -1,0 +1,110 @@
+<FlatButton@ButtonBehavior+Label>:
+    font_size: 14
+
+<checkBuyFromCountryPage>:
+    id: main_win
+    orientation: 'vertical'
+    canvas.before:
+        Color:
+            rgba: (.038, .050, .056 , 1)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    BoxLayout:
+        id: header
+        size_hint_y: None
+        height: 40
+        canvas.before:
+            Color:
+                rgba: (.038, .050, .056 , 1)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            text: 'Check buy from Country'
+            size_hint_x: .9
+            bold: True
+            font_size: 25
+            color: (1,1,1,1)
+
+    BoxLayout:
+        id: current
+        size_hint_y: None
+        height: 25
+
+        canvas.before:
+            Color:
+                rgba: (.038, .050, .056 , 1)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            text: ''
+            background_normal: ''
+            background_color: (.038, .050, .056 , 1)
+            size_hint_x: .6
+        
+        Button: 
+            id: cur_price
+            text: 'Back'
+            background_normal: ''
+            background_color: (.038, .050, .056 , 1)
+            size_hint_x: .10
+            on_release: root.BackToDashboard()
+
+
+    BoxLayout:
+        id: current
+        size_hint_y: None
+        height: 50
+        canvas.before:
+            Color:
+                rgba: (1,1,1, 1)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Button:
+            text: 'Country Name:'
+            background_normal: ''
+            background_color: (.096, .125, .139, 1)
+            size_hint_x: .4
+  
+        TextInput:
+            id: country
+            multiline: False
+            on_text_validate: root.update_purchases()
+
+        Button: 
+            id: cur_price
+            text: 'Check'
+            background_normal: ''
+            background_color: (.096, .125, .139, 1)
+            size_hint_x: .2
+            on_release: root.update_purchases()
+
+    BoxLayout:
+        padding: 10
+        BoxLayout:
+            id: product_details
+            orientation: "vertical"
+            size_hint_x: .8
+            spacing: 10
+
+            BoxLayout:
+                id: product_labels
+                size_hint_y: None
+                height: 40
+                canvas.before:
+                    Color:
+                        rgba: (.084,.110,.122, 1)
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                    
+                FlatButton:
+                    text: 'Results'
+
+            GridLayout:
+                id: message
+                cols: 1
