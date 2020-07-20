@@ -11,6 +11,7 @@ import saleList
 import branchList
 import customerList
 import supplierList
+import dashboard
 
 Builder.load_file('base.kv')
 
@@ -26,6 +27,7 @@ class BasePage(BoxLayout):
     branchListPage = branchList.branchListPageScreen()
     customerListPage = customerList.customerListPageScreen()
     supplierListPage = supplierList.supplierListPageScreen()
+    dashboardPage = dashboard.dashboardPageScreen()
 
     def __init__(self , **kwargs):
         super().__init__(**kwargs)
@@ -39,6 +41,7 @@ class BasePage(BoxLayout):
         self.ids.BranchListPage.add_widget(self.branchListPage)
         self.ids.CustomerListPage.add_widget(self.customerListPage)
         self.ids.SupplierListPage.add_widget(self.supplierListPage)
+        self.ids.DashboardPage.add_widget(self.dashboardPage)
 
 class MainApp(App):
 

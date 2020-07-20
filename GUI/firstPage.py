@@ -13,6 +13,8 @@ class FirstPageScreen(BoxLayout,GridLayout):
     def ShiftToTables(self):
         self.parent.parent.current = 'TablesListPageScreen'
 
+    def ShiftToDashboard(self):
+        self.parent.parent.current = 'dashboardPageScreen'
 
 class MainApp(App):
 

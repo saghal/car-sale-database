@@ -1,0 +1,63 @@
+<dashboardPageScreen>:
+    id: main_win
+    orientation: 'vertical'
+    canvas.before:
+        Color:
+            rgba: (.038, .050, .056 , 1)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    BoxLayout:
+        id: header
+        size_hint_y: None
+        height: 40
+        canvas.before:
+            Color:
+                rgba: (.038, .050, .056 , 1)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            text: 'Tables'
+            size_hint_x: .9
+            bold: True
+            font_size: 25
+            color: (1,1,1,1)
+
+    BoxLayout:
+        id: current
+        size_hint_y: None
+        height: 25
+        padding: 5
+        canvas.before:
+            Color:
+                rgba: (.038, .050, .056 , 1)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            text: ''
+            background_normal: ''
+            background_color: (.038, .050, .056 , 1)
+            size_hint_x: .6
+        Button: 
+            id: cur_price
+            text: 'Back'
+            background_normal: ''
+            background_color: (.038, .050, .056 , 1)
+            size_hint_x: .05
+            on_release: root.BackToFirstPage()
+
+    GridLayout:
+        id: first_page
+        padding: 5
+        cols:3
+        orientation: 'horizontal'
+        Button:
+            background_normal: ''
+            background_color: (.069 , .090 , .100 , 1)
+            text: "Province"
+            bold: True
+
+      
