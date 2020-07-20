@@ -37,6 +37,19 @@ WHERE Vehicle.Miles > @Millage
 
 select * FROM [dbo].[CarMillage](1000)
 
+-- show cars millage less than @Millage
+CREATE FUNCTION CarLessMillage(@Millage int)
+RETURNS TABLE
+AS
+RETURN
+SELECT *
+FROM Vehicle
+WHERE Vehicle.Miles < @Millage
+
+
+
+
+
 
 -- input country name, this function show from this country we bought any thing or not
 ALTER FUNCTION CountryCars(@CountryName VARCHAR(20))
