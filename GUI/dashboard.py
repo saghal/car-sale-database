@@ -24,6 +24,9 @@ class dashboardPageScreen(BoxLayout, GridLayout, AnchorLayout):
     def ShifToSumEachBr(self):
         self.parent.parent.current = 'sumSaleEachBranchPageScreen'
 
+    def ShifToSumCar(self):
+        self.parent.parent.current = 'sumSaleCarPageScreen'
+
     def BackToFirstPage(self):
         self.parent.parent.current = 'firstPageScreen'
     
