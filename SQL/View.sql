@@ -71,3 +71,4 @@ AS
 SELECT * from Sale
 
 SELECT * FROM BoughtCarsAllDetail
+

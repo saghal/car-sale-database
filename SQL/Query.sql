@@ -1,3 +1,4 @@
+--Query 1
 --Simple queries
 
 USE CarSaleDatabase
@@ -13,6 +14,7 @@ SELECT * FROM Supplier
 
 
 
+-- Query 2
 -- show companies have hybride cars
 SELECT DISTINCT Company.Name 
 from Vehicle INNER JOIN Company
@@ -22,7 +24,7 @@ WHERE Fuel = 'Hybride'
 
 
 
-
+-- Query 3
 -- show Female customers purchase more than 50000
 WITH SpecialFemaleCustomer(CustomerID,Price) as(
     SELECT CustomerID, SUM(Price) 
@@ -39,7 +41,7 @@ ORDER BY C.LastName
 
 
 
-
+-- Query 4
 -- show Male customers purchase more than 60000
 WITH SpecialMaleCustomer(CustomerID, Price)as(
         SELECT CustomerID, SUM(Price)
@@ -57,7 +59,7 @@ ORDER BY c.CustomerID
 
 
 
-
+--Query 5
 -- show each company sum sales
 WITH CarCompany(CarID, CarName, CompanyID, CompanyName) as(
     SELECT V.CarID, V.Model, V.CompanyID, C.Name
