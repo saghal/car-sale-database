@@ -17,7 +17,7 @@ import millage
 import cityBranches
 import sumSaleEachBranch
 import sumSaleCar
-
+import saleCarsDetail
 Builder.load_file('base.kv')
 
 class BasePage(BoxLayout):
@@ -38,6 +38,7 @@ class BasePage(BoxLayout):
     cityBranchesPage = cityBranches.cityBranchesPageScreen()
     sumSaleEachBranchPage = sumSaleEachBranch.sumSaleEachBranchPageScreen()
     sumSaleCarPage = sumSaleCar.sumSaleCarPageScreen()
+    SaleCarPage = saleCarsDetail.SaleCarPageScreen()
 
     def __init__(self , **kwargs):
         super().__init__(**kwargs)
@@ -57,6 +58,9 @@ class BasePage(BoxLayout):
         self.ids.CityBranchesPage.add_widget(self.cityBranchesPage)
         self.ids.SumSaleEachBranchPage.add_widget(self.sumSaleEachBranchPage)
         self.ids.SumSaleCarPage.add_widget(self.sumSaleCarPage)
+        self.ids.SaleCarsPage.add_widget(self.SaleCarPage)
+
+
 
 
 class MainApp(App):
