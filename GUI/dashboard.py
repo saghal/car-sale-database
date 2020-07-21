@@ -18,9 +18,13 @@ class dashboardPageScreen(BoxLayout, GridLayout, AnchorLayout):
     def ShiftToMillage(self):
         self.parent.parent.current = 'millagePageScreen'
 
+    def ShifToCityBranches(self):
+        self.parent.parent.current = 'cityBranchesPageScreen'
+        
     def BackToFirstPage(self):
         self.parent.parent.current = 'firstPageScreen'
     
+
 
 class MainApp(App):
 
