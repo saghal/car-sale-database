@@ -15,7 +15,7 @@ import dashboard
 import checkFrom
 import millage
 import cityBranches
-
+import sumSaleEachBranch
 Builder.load_file('base.kv')
 
 class BasePage(BoxLayout):
@@ -34,7 +34,8 @@ class BasePage(BoxLayout):
     checkBuyFromCountryPage = checkFrom.checkBuyFromCountryPage()
     millagePage = millage.millagePageScreen()
     cityBranchesPage = cityBranches.cityBranchesPageScreen()
- 
+    sumSaleEachBranchPage = sumSaleEachBranch.sumSaleEachBranchPageScreen()
+
     def __init__(self , **kwargs):
         super().__init__(**kwargs)
         self.ids.FirstPage.add_widget(self.firstPage)
@@ -51,6 +52,7 @@ class BasePage(BoxLayout):
         self.ids.CheckBuyFromCountryPage.add_widget(self.checkBuyFromCountryPage)
         self.ids.MillagePage.add_widget(self.millagePage)
         self.ids.CityBranchesPage.add_widget(self.cityBranchesPage)
+        self.ids.SumSaleEachBranchPage.add_widget(self.sumSaleEachBranchPage)
 
 
 class MainApp(App):

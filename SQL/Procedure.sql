@@ -8,7 +8,7 @@ WHERE CityName = @city
 EXECUTE CityBranches @city = 'Tehran'
 
 
--- sum price solded each province
+-- sum price solded each city
 CREATE PROCEDURE CityAndBranchSumSale
 as
 select SS.*,
@@ -36,3 +36,6 @@ FROM Vehicle left JOIN Sale
                         INNER JOIN Company
                                 ON Vehicle.CompanyID = Company.CompanyID
 GROUP BY Vehicle.Model, Company.Name) as SS
+
+
+EXECUTE CompanyModelSale
