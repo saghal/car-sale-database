@@ -1,7 +1,7 @@
 <FlatButton@ButtonBehavior+Label>:
     font_size: 14
 
-<checkBuyFromCountryPage>:
+<millagePageScreen>:
     id: main_win
     orientation: 'vertical'
     canvas.before:
@@ -22,7 +22,7 @@
                 size: self.size
                 pos: self.pos
         Label:
-            text: 'Check buy from Country'
+            text: 'Millage'
             size_hint_x: .9
             bold: True
             font_size: 25
@@ -60,28 +60,36 @@
         height: 50
         canvas.before:
             Color:
-                rgba: (1,1,1, 1)
+                rgba: (.096, .125, .139, 1)
             Rectangle:
                 size: self.size
                 pos: self.pos
-        Button:
-            text: 'Country Name:'
-            background_normal: ''
-            background_color: (.096, .125, .139, 1)
-            size_hint_x: .4
-  
-        TextInput:
-            id: country
-            multiline: False
-            on_text_validate: root.update_purchases()
-
-        Button: 
-            id: cur_price
-            text: 'Check'
+        Label:
+            text: 'Mile:'
             background_normal: ''
             background_color: (.096, .125, .139, 1)
             size_hint_x: .2
+
+        TextInput:
+            id: country
+            multiline: False
+
+        Button:
+            text: 'more than'
+            background_normal: ''
+            background_color: (.096, .125, .139, 1)
+            size_hint_x: .4
             on_release: root.update_purchases()
+
+  
+
+        Button: 
+            id: cur_price
+            text: 'less than'
+            background_normal: ''
+            background_color: (.096, .125, .139, 1)
+            size_hint_x: .4
+            on_release: root.lessMillage()
 
     BoxLayout:
         padding: 10
@@ -103,11 +111,22 @@
                         pos: self.pos
                     
                 FlatButton:
-                    text: 'Results'
+                    text: 'carID'
+                FlatButton:
+                    text: 'Enigine Number'
+                FlatButton:
+                    text: 'Model'
+                FlatButton:
+                    text: 'Miles'
+                FlatButton:
+                    text: 'Prod Year'
+                FlatButton:
+                    text: 'Fuel'
+
 
             ScrollView:
                 GridLayout:
-                    id: message
+                    id: car
                     size_hint_y:None
                     cols: 1
                     row_default_height: root.height*0.02

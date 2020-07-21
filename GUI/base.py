@@ -13,6 +13,7 @@ import customerList
 import supplierList
 import dashboard
 import checkFrom
+import millage
 
 Builder.load_file('base.kv')
 
@@ -30,7 +31,7 @@ class BasePage(BoxLayout):
     supplierListPage = supplierList.supplierListPageScreen()
     dashboardPage = dashboard.dashboardPageScreen()
     checkBuyFromCountryPage = checkFrom.checkBuyFromCountryPage()
-
+    millagePage = millage.millagePageScreen()
 
     def __init__(self , **kwargs):
         super().__init__(**kwargs)
@@ -46,6 +47,7 @@ class BasePage(BoxLayout):
         self.ids.SupplierListPage.add_widget(self.supplierListPage)
         self.ids.DashboardPage.add_widget(self.dashboardPage)
         self.ids.CheckBuyFromCountryPage.add_widget(self.checkBuyFromCountryPage)
+        self.ids.MillagePage.add_widget(self.millagePage)
 
 
 

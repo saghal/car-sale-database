@@ -15,9 +15,12 @@ class dashboardPageScreen(BoxLayout, GridLayout, AnchorLayout):
     def ShiftToCheckBuyFromCountry(self):
         self.parent.parent.current = 'checkBuyFromCountryPageScreen'
 
+    def ShiftToMillage(self):
+        self.parent.parent.current = 'millagePageScreen'
+
     def BackToFirstPage(self):
         self.parent.parent.current = 'firstPageScreen'
-
+    
 
 class MainApp(App):
 
