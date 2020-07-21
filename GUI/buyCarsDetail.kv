@@ -1,7 +1,7 @@
 <FlatButton@ButtonBehavior+Label>:
     font_size: 14
 
-<sumSaleCarPageScreen>:
+<BuyCarPageScreen>:
     id: main_win
     orientation: 'vertical'
     canvas.before:
@@ -22,7 +22,7 @@
                 size: self.size
                 pos: self.pos
         Label:
-            text: 'car model sum solded'
+            text: 'Bought cars details'
             size_hint_x: .9
             bold: True
             font_size: 25
@@ -73,20 +73,36 @@
                     Rectangle:
                         size: self.size
                         pos: self.pos
-                    
+
+                FlatButton:
+                    text: 'CarID'                    
                 FlatButton:
                     text: 'Model'
                 FlatButton:
                     text: 'Company Name'
                 FlatButton:
-                    text: 'Car sum solded'
+                    text: 'Color'
                 FlatButton:
-                    text: 'Company Sum Solded'
+                    text: 'Car Type'
+                FlatButton:
+                    text: 'Prod year'
+                FlatButton:
+                    text: 'Fuel'
+                FlatButton:
+                    text: 'Millage'
+                FlatButton:
+                    text: 'Supplier'
+                FlatButton:
+                    text: 'city'
+                FlatButton:
+                    text: 'province'
+                FlatButton:
+                    text: 'Price'
 
 
             ScrollView:
                 GridLayout:
-                    id: city
+                    id: car
                     size_hint_y:None
                     cols: 1
                     row_default_height: root.height*0.02

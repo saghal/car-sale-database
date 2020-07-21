@@ -70,3 +70,4 @@ AS
                                         ON P.ProvinceID = City.ProvinceID                                                
 SELECT * from Sale
 
+SELECT * FROM BoughtCarsAllDetail

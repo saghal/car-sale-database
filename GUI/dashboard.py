@@ -30,6 +30,9 @@ class dashboardPageScreen(BoxLayout, GridLayout, AnchorLayout):
     def ShifToSaleCar(self):
         self.parent.parent.current = 'SaleCarsPageScreen'
 
+    def ShifToBuyCar(self):
+        self.parent.parent.current = 'BuyCarsPageScreen'
+
     def BackToFirstPage(self):
         self.parent.parent.current = 'firstPageScreen'
     
